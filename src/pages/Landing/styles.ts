@@ -10,6 +10,16 @@ export const Header = styled.div`
     color:#fff;
     padding: 20px;
     text-align:center;
+    width: 100%;
+
+    h1{
+        font-size: 1.7rem;
+        padding-bottom:4px;
+    }
+
+    p{
+        padding-bottom: 2px;
+    }
 
     section{
         width:100%;
@@ -49,4 +59,24 @@ export const Time = styled.div`
     line-height:54px;
 `;
 
+export const ContainerProduto = styled.div`
+    margin-top:4px;
+
+    h4{
+        text-align:center;
+        margin-bottom: 4px;
+    }
+
+    .list{
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+
+        @media(min-width:768px){
+        flex-direction: row;
+        justify-content:space-around;
+        }
+    }
+
+`;
 
