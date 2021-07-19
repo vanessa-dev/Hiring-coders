@@ -1,5 +1,5 @@
 import React from 'react';
-import {Header,Cronometro, Time, ContainerProduto} from './styles';
+import {Header,Cronometro, Time, ContainerProduto, ContainerCadastro, Rodape} from './styles';
 import Produto from  '../../components/Produto';
 const Landing: React.FC = ()=>{
   return(
@@ -22,7 +22,21 @@ const Landing: React.FC = ()=>{
                </div>
             </Cronometro>
         </section>
+        <a>QUERO SER AVISADO!</a>
     </Header>
+    <ContainerCadastro>
+        <div className="descricao">
+            <h3>Receba as ofertas no seu email!</h3>
+            <p> Não perca nenhum de nossos descontos.</p>
+        </div>
+        <div className="formulario">
+            <form>
+                <input placeholder="Nome" />
+                <input placeholder="Email" />
+                <button>Enviar</button>
+            </form>
+        </div>
+    </ContainerCadastro>
     <ContainerProduto>
         <h4>Confira os nossos Produtos mais vendidos!</h4>
         <div className="list">
@@ -31,8 +45,9 @@ const Landing: React.FC = ()=>{
             <Produto price="120,00" nome="Produto Teste Hiring Coders 3"/>
         </div>
     </ContainerProduto>
-
-
+    <Rodape>
+        <p>Desafio Hiring Coders</p>
+    </Rodape>
     </>
   );
 }

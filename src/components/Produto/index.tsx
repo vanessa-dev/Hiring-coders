@@ -7,8 +7,8 @@ interface iProdutosProps{
     nome:string;
 }
 
-const Produto: React.FC<iProdutosProps> = ({price,nome}) =>{
-  return (
+const Produto: React.FC<iProdutosProps> = ({price,nome}) =>(
+
     <Container>
         <img src={imgProduto} alt="" />
         <p>{nome}</p>
@@ -16,7 +16,7 @@ const Produto: React.FC<iProdutosProps> = ({price,nome}) =>{
             <b>R$ {price}</b>
         </div>
     </Container>
-  );
-}
+
+);
 
 export default Produto;
