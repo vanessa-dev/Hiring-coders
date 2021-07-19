@@ -1,5 +1,5 @@
 import React from 'react';
-import {Header,Cronometro, Time, ContainerProduto, ContainerCadastro, Rodape} from './styles';
+import {Header,ContainerProduto, ContainerCadastro, Rodape} from './styles';
 import Produto from  '../../components/Produto';
 const Landing: React.FC = ()=>{
   return(
@@ -9,7 +9,7 @@ const Landing: React.FC = ()=>{
             <h1>Black friday</h1>
             <p>Esta chegando...</p>
             <p>As melhores ofertas com até <b>50%</b> de desconto.</p>
-            <Cronometro>
+            {/* <Cronometro>
                <div>
                     <Time>12</Time>
                     <Time>13</Time>
@@ -20,7 +20,7 @@ const Landing: React.FC = ()=>{
                     <span>Minutos</span>
                     <span>Segundos</span>
                </div>
-            </Cronometro>
+            </Cronometro> */}
         </section>
         <a>QUERO SER AVISADO!</a>
     </Header>
