@@ -8,7 +8,7 @@ const Landing: React.FC = ()=>{
   const handleSubmit = useCallback((event :  FormEvent<HTMLFormElement>):void =>{
     event.preventDefault();
     nome && localStorage.setItem('@nome', nome);
-    nome && localStorage.setItem('@email', email);
+    email && localStorage.setItem('@email', email);
   },[]);
 
   return(

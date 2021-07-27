@@ -98,7 +98,6 @@ export const ContainerCadastro = styled.div`
 
     .formulario{
         input{
-            background: #232129;
             border-radius: 10px;
             border: 2px solid #232129;
             padding: 16px;
