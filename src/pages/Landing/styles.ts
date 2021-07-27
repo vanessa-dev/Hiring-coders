@@ -81,7 +81,7 @@ export const ContainerProduto = styled.div`
 `;
 
 export const ContainerCadastro = styled.div`
-    background: url(${background}) no-repeat;
+    background:  linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(${background}) no-repeat;
     background-size: cover;
     background-attachment: fixed;
     height:250px;
