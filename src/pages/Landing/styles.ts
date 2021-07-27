@@ -93,6 +93,7 @@ export const ContainerCadastro = styled.div`
 
     .descricao{
         margin-bottom: 15px;
+        align-self:center;
     }
 
     .formulario{
