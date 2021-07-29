@@ -1,18 +1,27 @@
 import React, { FormEvent, useState,useCallback } from 'react';
 import {Header,ContainerProduto, ContainerCadastro, Rodape} from './styles';
+import Alerta from  '../../components/Alerta';
 import Produto from  '../../components/Produto';
 const Landing: React.FC = ()=>{
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
+  const [message, setMessage] = useState(false);
 
   const handleSubmit = useCallback((event :  FormEvent<HTMLFormElement>):void =>{
     event.preventDefault();
-    nome && localStorage.setItem('@nome', nome);
-    email && localStorage.setItem('@email', email);
+    localStorage.setItem('@nome', nome);
+    localStorage.setItem('@email', email);
+
+    setMessage(true);
+
+    setTimeout(function(){
+        setMessage(false);
+    }, 3000);
   },[]);
 
   return(
     <>
+    {message && <Alerta email={email}/> }
     <Header>
         <section>
             <h1>Black friday</h1>
@@ -48,8 +57,8 @@ const Landing: React.FC = ()=>{
         </div>
         <div className="formulario">
             <form onSubmit={handleSubmit}>
-                <input value={nome} onChange={(e) => setNome(e.target.value)} placeholder="Digite seu Nome" />
-                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Digite seu Email" />
+                <input value={nome} onChange={(e) => setNome(e.target.value)} placeholder="Digite seu Nome" required/>
+                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Digite seu Email" required/>
                 <button>Enviar</button>
             </form>
         </div>
