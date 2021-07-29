@@ -15,4 +15,10 @@ export const Container = styled.div`
     .info-produto{
         padding-top:8px;
     }
+
+    &:hover{
+        border-color: 1px solid black;
+        transform: scale(1);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+    }
 `;
